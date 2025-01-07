@@ -26,14 +26,14 @@ Body {
     border-right: 5px solid #1a0f11;
 }
 
-.profile picture {
-    width: 150px;
-    height: 150px;
+.profile-picture {
+    width: 200px;
+    height: 200px;
     margin-top:10% ;
     border-radius: 50%;
-    border:5px solid #e63946;
+    border:5px solid rgb(243, 104, 104);
     margin-bottom: 20px;
-    
+
 }
 h1 {
     font-size: 30px;
@@ -80,4 +80,75 @@ button {
 
 button:hover {
     background-color: #dfafb7;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 10px;
+        border: none; /* Remove border on smaller screens */
+    }
+
+    .left-section {
+        border-bottom: 5px solid #1a0f11; /* Add bottom border for separation */
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    h1, h3 {
+        font-size: 24px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+/* For mobile and small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 50px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .resume-container {
+        width: 100%;
+        box-shadow: none; /* Simplify shadow effect for performance */
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    ul li {
+        margin: 3px 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
 }
